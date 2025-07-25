@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Elements - 2</title>
+    <script>
+        function btnClick() {
+            let table = document.createElement('table')
+            table.setAttribute("border", "2px solid black")
+            table.setAttribute("align", "center")
+            table.setAttribute("width", "500px")
+            table.setAttribute("bgcolor", "red")
+
+
+
+            //insert row in table
+            for (let i = 1; i <= 5; i++) {
+                let row = table.insertRow()
+                    //insert col in row
+                let col1 = row.insertCell()
+                col1.textContent = "Column 1"
+
+                let col2 = row.insertCell()
+                col2.textContent = "Column 2"
+
+                let col3 = row.insertCell()
+                col3.textContent = "Column 3"
+            }
+
+            document.body.prepend(table)
+        }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="btnClick()">Button</button>
+</body>
+
+</html>

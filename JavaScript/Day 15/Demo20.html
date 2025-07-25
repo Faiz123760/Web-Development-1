@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        .clsA {
+            background-color: navy;
+            color: white;
+        }
+        
+        .clsB {
+            text-align: center;
+            line-height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+    <script>
+        function btnClick() {
+            //let lst = document.getElementsByTagName('h1')
+            // console.log(lst);
+
+            // let lst2 = document.getElementsByClassName('clsA')
+            // console.log(lst2);
+            //  let lst = document.querySelector('h1')
+            // let lst = document.querySelectorAll('h1')
+
+            // let lst = document.querySelector('#myH4')
+            // let lst = document.querySelectorAll('.clsA')
+
+            //select next sibling
+            // let lst = document.querySelector('#myH4 + h1')
+            let lst = document.querySelector('h1:nth-child(3)')
+
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Heading 1</h1>
+    <h1 class="clsA">Heading 2</h1>
+    <h1>Heading 3</h1>
+    <h1 id="myH4">Heading 4</h1>
+    <h1>Heading 5</h1>
+    <p class="clsA">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque natus modi aperiam sint repudiandae, maiores nulla. Inventore sit, voluptatum consectetur obcaecati odio laborum minima labore suscipit, nisi animi amet ut. Laboriosam beatae culpa accusantium
+        iusto eveniet sed, aspernatur veniam aperiam voluptates dolor id laborum! Deserunt consequuntur facilis similique placeat eius. Illum ea ducimus, saepe sequi voluptas, amet unde beatae quas doloribus rem culpa sit ex suscipit, repellat veniam
+        aliquid aliquam fugiat laudantium dolor quia velit. Quod quas fugiat reprehenderit sapiente. Hic quisquam quo molestias placeat reprehenderit quis aspernatur, aliquam quas, vero, facilis sequi ullam adipisci. Neque debitis ipsa dicta inventore
+        adipisci, optio earum, aut porro iusto, reprehenderit et alias dolorem cumque! Illum sunt aliquam sapiente quos. Ducimus, quas rerum? Mollitia quia possimus quasi dolorem laborum enim suscipit libero, nesciunt velit sunt officiis sint nemo vel
+        voluptatum distinctio, in commodi, perspiciatis provident? Ipsa, consectetur! Nam numquam ipsam culpa, libero earum aperiam suscipit doloremque ea ex modi, delectus quidem quas nesciunt tempora eos. Quam dolore iste at ad odio sequi. Dolore optio
+        reiciendis, quia perspiciatis, assumenda sapiente nam fugiat similique quas aperiam error, labore recusandae amet! Autem rerum nihil perspiciatis, facere eos quis, sunt consectetur beatae dignissimos, suscipit maiores odit quaerat corrupti.</p>
+    <button onclick="btnClick()">Button</button>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM -2 </title>
+    <style type="text/CSS">
+        .clsA{ background-color: navy; color: white; } .clsB{ text-align: center; line-height: 100px; border: 1px solid red; }
+    </style>
+    <script>
+        function btnClick(params) {
+            let ele = document.getElementById("myH")
+            let lst = ele.classList;
+
+            // //to add class on element directly
+            // lst.add('clsA')
+
+            // if (!lst.contains('clsB'))
+            //     lst.add('clsB')
+
+            // console.log(lst);
+
+            // //to remove a specific class
+            // lst.remove('clsB')
+            // console.log(lst);
+
+            // //to replace 1st with 2nd class
+            // lst.replace('clasB', 'clsA')
+
+            lst.toggle('clsA')
+            console.log(lst);
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="myH" class="clsB">Document Object Modal</h1>
+    <button onclick="btnClick()">
+        Button
+    </button>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - 3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <style type="text/CSS">
+        .clsA{ background-color: navy; color: white; } .clsB{ text-align: center; line-height: 100px; border: 1px solid red; }
+    </style>
+    <script>
+        function btnClick(params) {
+            let ele = document.getElementById('pwd')
+                // console.log(ele.value);
+                // console.log(ele.type);
+                // console.log(ele.placeholder);
+                // console.log(ele.id);
+
+
+            ele.type = (ele.type === 'password') ? 'text' : 'password';
+            let btn = document.getElementById('btn');
+            let lst = btn.classList;
+            lst.contains("fa-eye") ? lst.replace('fa-eye', 'fa-eye-slash') : lst.replace('fa-eye-slash', 'fa-eye');
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="myH" class="clsB">Document Object Modal - 3</h1>
+    <input type="password" name="" id="pwd" placeholder="Eg:123Hp@123">
+    <button onclick="btnClick()" id="btn" class="fa-solid fa-eye" style="width: 50px;"></button>
+</body>
+
+</html>

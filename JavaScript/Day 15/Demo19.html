@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - 4</title>
+    <script>
+        function btnClick() {
+            let btn = document.getElementsByName('gender')
+                // console.log(btn);
+            btn.forEach((b) => {
+                if (b.checked) {
+                    console.log(b.value);
+
+                }
+            })
+        }
+
+        function selectAll() {
+            let sel = document.getElementsByName('hobbies');
+            console.log(sel);
+
+            let isChecked = false;
+            sel.forEach((b) => {
+                // if (b.checked) {
+                //     console.log(b.value);
+
+                // }
+                if (!isChecked) {
+                    b.checked = true;
+                } else {
+                    b.checked = false;
+                }
+
+            })
+
+            isChecked = !isChecked;
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="radio" name="gender" id="" value="Male">Male</input>
+    <input type="radio" name="gender" id="" value="Female">Female</input>
+    <input type="submit" name="subBtn" onclick="btnClick()">
+    <hr>
+
+
+
+    <input type="checkbox" name="hobbies" id="" value="Swimming"> Swimming <br>
+    <input type="checkbox" name="hobbies" id="" value="Dancing"> Dancing <br>
+    <input type="checkbox" name="hobbies" id="" value="Reading"> Reading <br>
+    <input type="checkbox" name="hobbies" id="" value="Writing"> Writing <br>
+    <button onclick="selectAll()">Select All</button>
+
+</body>
+
+</html>

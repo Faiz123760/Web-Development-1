@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Elements - 1</title>
+    <script>
+        function btnClick() {
+            let h1 = document.createElement('h1')
+            h1.textContent = 'JS Demo Page'
+            h1.style.backgroundColor = 'navy'
+            h1.style.color = 'yellow'
+            h1.style.textAlign = 'center'
+            h1.style.padding = '20px'
+            console.log(h1);
+
+
+            // document.body.append(h1)
+            document.body.prepend(h1)
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="btnClick()">Button</button>
+</body>
+
+</html>
